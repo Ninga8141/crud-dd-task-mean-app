@@ -1,0 +1,55 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: mean_mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: db_db
+      # Optionally init user:
+      # MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      # MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - mean_mongo_data:/data/db
+    networks:
+      - mean_network
+
+  backend:
+    image: ninga8141/mean-backend:latest
+    container_name: mean_backend
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    environment:
+      - NODE_ENV=production
+      - PORT=8080
+      - MONGO_HOST=mongo
+      - MONGO_PORT=27017
+      - MONGO_DB=db_db
+      # If using credentials:
+      # - MONGO_USER=${MONGO_USER}
+      # - MONGO_PASS=${MONGO_PASS}
+    ports:
+      - "127.0.0.1:8080:8080"  # bound to localhost since Nginx will proxy; change if needed
+    networks:
+      - mean_network
+
+  nginx:
+    image: nginx:stable-alpine
+    container_name: mean_nginx
+    restart: unless-stopped
+    depends_on:
+      - backend
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "80:80"
+    networks:
+      - mean_network
+
+volumes:
+  mean_mongo_data:
+
+networks:
+  mean_network:
+
