@@ -50,8 +50,6 @@ Frontend Image:
 cd frontend
 docker build -t <dockerhub-username>/mean-frontend .
 docker push <dockerhub-username>/mean-frontend
-Frontend Build
-![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/Frondend%20Build.png)
 
 Frontend S3 Deoplyed
 ![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/FrondEnd%20S3%20Deployed.png)
@@ -62,7 +60,7 @@ sudo apt update
 sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
 Docker Image Build and Puss process
-![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/Docker%20image%20build%20and%20push%20process..png)
+
 
 
 Deploy Application
