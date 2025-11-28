@@ -15,19 +15,7 @@ Deployed frontend via S3
 Backend hosted on EC2 behind Nginx reverse proxy
 
 crud-dd-task-mean-app/
-├── backend/
-│   ├── Dockerfile
-│   ├── server.js
-│   └── app/config/db.config.js
-├── frontend/
-│   ├── Dockerfile
-│   └── src/app/services/tutorial.service.ts
-├── deployment/
-│   ├── docker-compose.yml
-│   ├── nginx.conf
-│   └── deploy.sh
-├── Jenkinsfile
-└── README.md
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/2b8109f593c19f6d8a9db7304510a8e195f83f4e/Screenshots/App-Directory%20structures.png)
 
 🛠 Step-by-Step Setup & Deployment
 1️⃣ Backend Setup (Node.js + Express)
@@ -51,6 +39,7 @@ Backend Image:
 cd backend
 docker build -t <dockerhub-username>/mean-backend .
 docker push <dockerhub-username>/mean-backend
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/2b8109f593c19f6d8a9db7304510a8e195f83f4e/Screenshots/Docker%20image%20build%20and%20push%20process..png)
 
 
 Frontend Image:
