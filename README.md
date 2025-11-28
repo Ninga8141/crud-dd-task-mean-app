@@ -97,3 +97,42 @@ Push Images	Docker login → push images to Docker Hub
 Deploy to VM	SSH → Pull images → Docker Compose up
 Upload Frontend	S3 sync for Angular UI
 
+
+CI/CD Process
+1. Continuous Integration (CI)
+
+Code Commit: Developers push code to the main branch or feature branches.
+
+Build Trigger: A CI tool (e.g., Jenkins, GitHub Actions, GitLab CI) automatically triggers a build.
+
+Dependencies Installation: Installs project dependencies (npm install for Node.js).
+
+Code Linting & Testing:
+
+Runs linter to ensure code quality
+
+Executes automated tests (npm test)
+
+Build Artifacts: Builds the application (e.g., npm run build) if tests pass.
+
+2. Continuous Deployment/Delivery (CD)
+
+Artifact Storage: Build artifacts are stored in a repository or storage bucket.
+
+Deployment Trigger: Upon successful build, deployment pipeline starts automatically.
+
+Deployment Steps:
+
+Backend deployed to server/container (e.g., Node.js app on Ubuntu VM or Docker container)
+
+Frontend deployed to static hosting (e.g., S3 bucket, Netlify, Vercel)
+
+Post-Deployment Tests: Ensures application is running correctly (smoke tests).
+
+3. Tools Used
+Stage	Tool / Technology
+CI	Jenkins / GitHub Actions / GitLab CI
+Build & Test	Node.js, npm, Mocha/Jest
+Deployment	Docker, AWS EC2, S3, Nginx
+Version Control	Git, GitHub
+
