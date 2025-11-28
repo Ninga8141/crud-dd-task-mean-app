@@ -15,6 +15,7 @@ Deployed frontend via S3
 Backend hosted on EC2 behind Nginx reverse proxy
 
 crud-dd-task-mean-app/
+App-Directory-Structures
 ![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/2b8109f593c19f6d8a9db7304510a8e195f83f4e/Screenshots/App-Directory%20structures.png)
 
 🛠 Step-by-Step Setup & Deployment
