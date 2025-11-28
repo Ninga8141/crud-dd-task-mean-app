@@ -23,6 +23,9 @@ App-Directory-Structures
 cd backend
 npm install
 # Update MongoDB credentials in app/config/db.config.js
+Backend CLI Test
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/Backend%20CLI%20test.png)
+
 node server.js
 API Endpoint: http://localhost:8080/api/tutorials
 ![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/99007101c82ea277b8b2008a5943fd54e27985b1/Screenshots/API%20Test.png)
@@ -47,12 +50,19 @@ Frontend Image:
 cd frontend
 docker build -t <dockerhub-username>/mean-frontend .
 docker push <dockerhub-username>/mean-frontend
+Frontend Build
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/Frondend%20Build.png)
+
+Frontend S3 Deoplyed
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/FrondEnd%20S3%20Deployed.png)
 
 4️⃣ Deployment on Cloud VM (Ubuntu EC2)
 Install Docker & Docker Compose
 sudo apt update
 sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
+Docker Image Build and Puss process
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/Docker%20image%20build%20and%20push%20process..png)
 
 
 Deploy Application
@@ -60,6 +70,14 @@ cd deployment
 docker-compose pull
 docker-compose up -d --force-recreate
 docker ps
+Deployments 
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/Deployments.png)
+
+DB Connections
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/DB%20connections.png)
+
+Image Deployed
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/Image%20%20Deployed.png)
 
 5️⃣ Nginx Reverse Proxy Configuration
 server {
@@ -74,6 +92,8 @@ server {
     }
 }
 
+Nginx Config
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/Nginx%20setup%20and%20infrastructure%20details..png)
 
 Reload Nginx:
 sudo nginx -t
@@ -88,6 +108,9 @@ Build Frontend	npm install + Angular production build
 Push Images	Docker login → push images to Docker Hub
 Deploy to VM	SSH → Pull images → Docker Compose up
 Upload Frontend	S3 sync for Angular UI
+
+CI/CD Configurations and exucations
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/d193b3070e08e407fbf4c099a92545a9f791603d/Screenshots/CICD%20configuration%20and%20execution.png)
 
 
 CI/CD Process
