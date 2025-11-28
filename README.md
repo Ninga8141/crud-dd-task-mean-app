@@ -44,6 +44,7 @@ npm install
 ng serve --port 8081
 UI URL: http://localhost:8081/
 Modify src/app/services/tutorial.service.ts to adjust backend API if require
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/134998bef9f1b322402396eea0a7ce13a64b1828/Screenshots/Frondend%20UI%20Tested.png)
 
 3️⃣ Dockerization
 Backend Image:
