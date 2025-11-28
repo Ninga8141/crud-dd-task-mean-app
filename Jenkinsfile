@@ -6,7 +6,7 @@ pipeline {
     TAG = "${env.BUILD_NUMBER}-${env.GIT_COMMIT?.substring(0,7)}"
     VM_USER = "ubuntu"
     VM_HOST = "3.84.126.63"
-    DEPLOY_DIR = "meanapp-deploy"
+    DEPLOY_DIR = "meanapp"
   }
 
   tools {
