@@ -5,7 +5,7 @@ pipeline {
     IMAGE_BACKEND = "ninga8141/mean-backend"
     TAG = "${env.BUILD_NUMBER}-${env.GIT_COMMIT?.substring(0,7)}"
     VM_USER = "ubuntu"
-    VM_HOST = "<YOUR_VM_PUBLIC_IP>"
+    VM_HOST = "3.84.126.63"
     DEPLOY_DIR = "meanapp-deploy"
   }
 
