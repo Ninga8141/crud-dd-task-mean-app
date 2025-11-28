@@ -36,6 +36,7 @@ npm install
 # Update MongoDB credentials in app/config/db.config.js
 node server.js
 API Endpoint: http://localhost:8080/api/tutorials
+![image alt](https://github.com/Ninga8141/crud-dd-task-mean-app/blob/99007101c82ea277b8b2008a5943fd54e27985b1/Screenshots/API%20Test.png)
 
 2️⃣ Frontend Setup (Angular)
 cd frontend
